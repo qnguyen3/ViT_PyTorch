@@ -29,7 +29,7 @@ cls		#pool
 ## Training
 Currently, you can only train this model on CIFAR-100 with the following commands:
 
-`> pip3 install einops`
-`> git clone https://github.com/quanmario0311/ViT_PyTorch.git`
-`> cd ViT_PyTorch`
+`> pip3 install einops`\
+`> git clone https://github.com/quanmario0311/ViT_PyTorch.git`\
+`> cd ViT_PyTorch`\
 `> python3 train.py`
