@@ -12,7 +12,7 @@ You can config the network by yourself through the `config.txt` file
 ```
 64 		#batch_size
 50 		#epoch
-0.001 	#learning_rate
+0.001 #learning_rate
 0.7 	#gamma
 256 	#img_size
 16 		#patch_size
@@ -21,8 +21,8 @@ You can config the network by yourself through the `config.txt` file
 12		#n_head
 12		#n_layers
 3072	#d_mlp
-3		#channels
-0.	  	#dropout
+3		  #channels
+0.	  #dropout
 cls		#pool
 ```
 
