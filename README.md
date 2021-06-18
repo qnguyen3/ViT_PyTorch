@@ -20,10 +20,10 @@ You can config the network by yourself through the `config.txt` file
 768	#d_model
 12	#n_head
 12  #n_layers
-3072  #d_mlp
-3		  #channels
-0.	  #dropout
-cls		#pool
+3072    #d_mlp
+3		    #channels
+0.	    #dropout
+cls		  #pool
 ```
 
 ## Training
