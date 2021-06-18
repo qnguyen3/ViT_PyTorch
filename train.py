@@ -36,10 +36,13 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
             epoch_accuracy += acc / len(train_loader)
             epoch_loss += loss / len(train_loader)
 
+            data = data.cpu()
+            label = label.cpu()
+
             epoch_val_accuracy = 0
             epoch_val_loss = 0
             for data, label in valid_loader:
-                model.valid()
+                model.eval()
                 #Load val_data into cuda
                 data = data.to(device)
                 label = label.to(device)
@@ -50,6 +53,8 @@ def train(model, train_loader, val_loader, criterion, optimizer, scheduler, epoc
                 acc = (val_output.argmax(dim=1) == label).float().mean()
                 epoch_val_accuracy += acc / len(valid_loader)
                 epoch_val_loss += val_loss / len(valid_loader)
+                data = data.cpu()
+                label = label.cpu()
         print(
             f"Epoch : {epoch+1} - loss : {epoch_loss:.4f} - acc: {epoch_accuracy:.4f} - val_loss : {epoch_val_loss:.4f} - val_acc: {epoch_val_accuracy:.4f}\n"
             )
