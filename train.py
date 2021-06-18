@@ -104,14 +104,14 @@ if __name__ == "__main__":
     train_len = len(train_data)
     val_len = test_len = int(len(test_val_data) / 2)
     test_data, val_data = torch.utils.data.random_split(test_val_data, [test_len, val_len])
-    train_data.targets
+    num_class = len(np.unique(train_data.targets))
     train_loader = DataLoader(dataset = train_data, batch_size = configs['batch_size'], shuffle = True)
     test_loader = DataLoader(dataset = test_data, batch_size=configs['batch_size'], shuffle = True)
     valid_loader = DataLoader(dataset = val_data, batch_size=configs['batch_size'], shuffle = True)
     
     vision_transformer = ViT(img_size = 256,
                             patch_size = 16,
-                            num_class = 100).to(device)
+                            num_class = num_class).to(device)
     #epochs
     epochs = configs['epochs']
     # loss function
