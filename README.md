@@ -10,26 +10,28 @@ This is an implementation of ViT - Vision Transformer by Google Research Team th
 You can config the network by yourself through the `config.txt` file
 
 ```
-64 		#batch_size
-50 		#epoch
-0.001 	#learning_rate
-0.7 	#gamma
-256 	#img_size
-16 		#patch_size
-100		#num_class
-768		#d_model
-12		#n_head
-12		#n_layers
-3072	#d_mlp
-3		#channels
-0.	  	#dropout
-cls		#pool
+64      #batch_size
+50      #epoch
+0.001   #learning_rate
+0.7     #gamma
+256     #img_size
+16 	#patch_size
+100	#num_class
+768	#d_model
+12	#n_head
+12      #n_layers
+3072    #d_mlp
+3	#channels
+0.	#dropout
+cls	#pool
 ```
 
 ## Training
 Currently, you can only train this model on CIFAR-100 with the following commands:
 
-`> pip3 install einops`
-`> git clone https://github.com/quanmario0311/ViT_PyTorch.git`
-`> cd ViT_PyTorch`
+`> pip3 install einops`\
+`> git clone https://github.com/quanmario0311/ViT_PyTorch.git`\
+`> cd ViT_PyTorch`\
 `> python3 train.py`
+
+***Suppport for other + custom datasets will be updated later***
