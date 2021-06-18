@@ -33,3 +33,5 @@ Currently, you can only train this model on CIFAR-100 with the following command
 `> git clone https://github.com/quanmario0311/ViT_PyTorch.git`\
 `> cd ViT_PyTorch`\
 `> python3 train.py`
+
+***Suppport for other + custom datasets will be updated later***
