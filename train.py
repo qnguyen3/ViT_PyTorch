@@ -139,6 +139,6 @@ if __name__ == "__main__":
     # optimizer
     optimizer = optim.Adam(vision_transformer.parameters(), lr=configs['learning_rate'])
     # scheduler
-    scheduler = StepLR(optimizer, step_size=1, gamma=configs['gamma'])
+    scheduler = StepLR(optimizer, step_size=7, gamma=configs['gamma'])
     
     train(vision_transformer, train_loader, valid_loader, criterion, optimizer, scheduler)
