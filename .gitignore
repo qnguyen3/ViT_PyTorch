@@ -1,0 +1,6 @@
+cifar100/cifar-100-python.tar.gz
+cifar100/cifar-100-python/train
+cifar100/cifar-100-python/test
+cifar100/cifar-100-python/meta
+cifar100/cifar-100-python/file.txt~
+__pycache__/model.cpython-38.pyc
