@@ -2,6 +2,7 @@
 
 This is an implementation of ViT - Vision Transformer by Google Research Team through the paper [**"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"**](https://arxiv.org/abs/2010.11929)
 
+**Please install PyTorch with CUDA support following this [link](https://pytorch.org/get-started/locally/)**
 
 ## ViT Architecture
 ![Architecture of Vision Transformer](https://neurohive.io/wp-content/uploads/2020/10/rsz_cov.png)
@@ -29,8 +30,8 @@ cls	#pool
 ## Training
 Currently, you can only train this model on CIFAR-100 with the following commands:
 
-`> pip3 install einops`\
 `> git clone https://github.com/quanmario0311/ViT_PyTorch.git`\
+`> pip3 install -r requirements.txt`\
 `> cd ViT_PyTorch`\
 `> python3 train.py`
 
