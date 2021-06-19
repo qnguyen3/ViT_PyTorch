@@ -31,8 +31,8 @@ cls	#pool
 Currently, you can only train this model on CIFAR-100 with the following commands:
 
 `> git clone https://github.com/quanmario0311/ViT_PyTorch.git`\
-`> pip3 install -r requirements.txt`\
 `> cd ViT_PyTorch`\
+`> pip3 install -r requirements.txt`\
 `> python3 train.py`
 
 ***Suppport for other + custom datasets will be updated later***
