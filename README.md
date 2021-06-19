@@ -35,4 +35,4 @@ Currently, you can only train this model on CIFAR-100 with the following command
 `> pip3 install -r requirements.txt`\
 `> python3 train.py`
 
-***Suppport for other + custom datasets will be updated later***
+***Suppport for other dataset and custom datasets will be updated later***
