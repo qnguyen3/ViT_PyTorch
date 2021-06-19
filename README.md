@@ -11,7 +11,7 @@ You can config the network by yourself through the `config.txt` file
 
 ```
 64      #batch_size
-50      #epoch
+200     #epoch
 0.001   #learning_rate
 0.7     #gamma
 256     #img_size
