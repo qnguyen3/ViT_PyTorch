@@ -14,7 +14,7 @@ You can config the network by yourself through the `config.txt` file
 64      #batch_size
 200     #epoch
 0.001   #learning_rate
-0.7     #gamma
+0.0001  #gamma
 256     #img_size
 16 	#patch_size
 100	#num_class
