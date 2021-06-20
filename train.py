@@ -141,4 +141,4 @@ if __name__ == "__main__":
     # scheduler
     scheduler = StepLR(optimizer, step_size=7, gamma=configs['gamma'])
     
-    train(vision_transformer, train_loader, valid_loader, criterion, optimizer, scheduler)
+    train(vision_transformer, train_loader, None, criterion, optimizer, scheduler)
