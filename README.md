@@ -11,7 +11,7 @@ This is an implementation of ViT - Vision Transformer by Google Research Team th
 You can config the network by yourself through the `config.txt` file
 
 ```
-64      #batch_size
+128     #batch_size
 500     #epoch
 0.001   #learning_rate
 0.0001  #gamma
