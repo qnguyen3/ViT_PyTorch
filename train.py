@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torchvision.datasets import CIFAR100
+from torchvision.datasets import CIFAR10
 from torch.utils.data.dataloader import DataLoader
 import torchvision.transforms as transforms
 import random
@@ -112,10 +112,10 @@ if __name__ == "__main__":
         transforms.ToTensor(),
     ])
 
-    train_data = CIFAR100(download=True,root="./cifar100",transform=train_transforms)
-    test_val_data = CIFAR100(root="./cifar100",train = False,transform=test_transforms)
+    train_data = CIFAR10(download=True,root="./cifar10",transform=train_transforms)
+    test_val_data = CIFAR10(root="./cifar10",train = False,transform=test_transforms)
     train_len = len(train_data)
-    val_len = test_len = int(len(test_val_data) / 2)
+    val_len = test_len = int(len(test_val_data)/2)
     test_data, val_data = torch.utils.data.random_split(test_val_data, [test_len, val_len])
     num_class = len(np.unique(train_data.targets))
     train_loader = DataLoader(dataset = train_data, batch_size = configs['batch_size'], shuffle = True)
@@ -139,6 +139,6 @@ if __name__ == "__main__":
     # optimizer
     optimizer = optim.Adam(vision_transformer.parameters(), lr=configs['learning_rate'])
     # scheduler
-    scheduler = StepLR(optimizer, step_size=7, gamma=configs['gamma'])
+    scheduler = StepLR(optimizer, step_size=10, gamma=0.7)
     
     train(vision_transformer, train_loader, valid_loader, criterion, optimizer, scheduler, epochs)

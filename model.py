@@ -1,3 +1,5 @@
+### Author: Quan Nguyen
+
 from module.Layers import *
 import torch
 import torch.nn as nn
